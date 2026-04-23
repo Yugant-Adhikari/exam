@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photo Gallery | WanderWorld Travel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="main-nav" aria-label="Main Navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">Discover<span>World</span></a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="tips.html">Travel Tips</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="page-wrapper">
+
+    <div class="page-title">
+      <h1>Travel Photo Gallery</h1>
+      <p class="subtitle">A visual journey through the world's most breathtaking destinations. Click any photo to view full size.</p>
+    </div>
+
+    <!-- Gallery Filter Local Nav -->
+    <nav class="local-nav" aria-label="Gallery Filter Navigation">
+      <strong>Filter by:</strong>
+      <a href="#all" onclick="filterGallery('all')">All</a> <span>|</span>
+      <a href="#europe" onclick="filterGallery('europe')">Europe</a> <span>|</span>
+      <a href="#asia" onclick="filterGallery('asia')">Asia</a> <span>|</span>
+      <a href="#americas" onclick="filterGallery('americas')">Americas</a> <span>|</span>
+      <a href="#africa" onclick="filterGallery('africa')">Africa</a>
+    </nav>
+
+    <!-- Gallery Grid — thumbnails link to full-size images -->
+    <div class="gallery-grid" id="galleryGrid">
+
+      <!-- Each gallery-item: thumbnail links to larger image via lightbox -->
+      <a href="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=1200&q=90"
+         class="gallery-item" data-category="europe"
+         onclick="openLightbox(this, 'Paris, France — The City of Light'); return false;"
+         aria-label="View full size: Paris France Eiffel Tower">
+        <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=400&q=70"
+             alt="Paris France Eiffel Tower at dusk with warm city lights" />
+        <div class="gallery-caption">Paris, France 🇫🇷</div>
+      </a>
+
+      <a href="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=90"
+         class="gallery-item" data-category="asia"
+         onclick="openLightbox(this, 'Tokyo, Japan — Where East meets West'); return false;"
+         aria-label="View full size: Tokyo Japan skyline at night">
+        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=70"
+             alt="Tokyo Japan city skyline glowing at night with neon lights" />
+        <div class="gallery-caption">Tokyo, Japan 🇯🇵</div>
+      </a>
+
+      <a href="https://images.unsplash.com/photo-1526392060635-9d6019884377?w=1200&q=90"
+         class="gallery-item" data-category="americas"
+         onclick="openLightbox(this, 'Machu Picchu, Peru — The Lost City of the Incas'); return false;"
+         aria-label="View full size: Machu Picchu Inca ruins in Peru">
+        <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?w=400&q=70"
+             alt="Machu Picchu ancient Inca ruins high in the Andes mountains Peru" />
+        <div class="gallery-caption">Machu Picchu, Peru 🇵🇪</div>
+      </a>
+
+      <a href="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=90"
+         class="gallery-item" data-category="asia"
+         onclick="openLightbox(this, 'Maldives — Paradise on Earth'); return false;"
+         aria-label="View full size: Maldives tropical beach paradise">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=70"
+             alt="Maldives tropical beach with turquoise water and white sand" />
+        <div class="gallery-caption">Maldives 🏝️</div>
+      </a>
+
+      <a href="https://images.unsplash.com/photo-1529260830199-42c24126f198?w=1200&q=90"
+         class="gallery-item" data-category="europe"
+         onclick="openLightbox(this, 'Santorini, Greece — The Jewel of the Aegean'); return false;"
+         aria-label="View full size: Santorini Greece white buildings blue domes">
+        <img src="https://images.unsplash.com/photo-1529260830199-42c24126f198?w=400&q=70"
+             alt="Santorini Greece white cycladic architecture with blue domed churches" />
+        <div class="gallery-caption">Santorini, Greece 🇬🇷</div>
+      </a>
+
+      <a href="https://images.unsplash.com/photo-1436891620584-47fd0e565afb?w=1200&q=90"
+         class="gallery-item" data-category="africa"
+         onclick="openLightbox(this, 'Serengeti, Kenya — The Wild Heart of Africa'); return false;"
+         aria-label="View full size: African safari lions at sunset">
+        <img src="https://images.unsplash.com/photo-1436891620584-47fd0e565afb?w=400&q=70"
+             alt="African lions resting on the savanna in the Serengeti at sunset" />
+        <div class="gallery-caption">Serengeti, Kenya 🦁</div>
+      </a>
+
+      <a href="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=1200&q=90"
+         class="gallery-item" data-category="asia"
+         onclick="openLightbox(this, 'Bali, Indonesia — Island of the Gods'); return false;"
+         aria-label="View full size: Bali Indonesia rice terraces lush green">
+        <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=400&q=70"
+             alt="Bali Indonesia lush green rice terraces with tropical palm trees" />
+        <div class="gallery-caption">Bali, Indonesia 🇮🇩</div>
+      </a>
+
+      <a href="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=90"
+         class="gallery-item" data-category="europe"
+         onclick="openLightbox(this, 'Swiss Alps — Peaks Above the Clouds'); return false;"
+         aria-label="View full size: Swiss Alps snow covered mountain peaks">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=70"
+             alt="Swiss Alps majestic snow covered mountain peaks with clear blue sky" />
+        <div class="gallery-caption">Swiss Alps 🇨🇭</div>
+      </a>
+
+    </div><!-- /gallery-grid -->
+
+    <!-- Info Table -->
+    <section class="section" style="margin-top:3rem;">
+      <h2>Gallery Statistics</h2>
+      <table>
+        <caption>Photos by Region</caption>
+        <thead>
+          <tr>
+            <th>Region</th>
+            <th>Number of Photos</th>
+            <th>Featured Destinations</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Europe</td><td>3</td><td>Paris, Santorini, Swiss Alps</td></tr>
+          <tr><td>Asia</td><td>3</td><td>Tokyo, Maldives, Bali</td></tr>
+          <tr><td>Americas</td><td>1</td><td>Machu Picchu</td></tr>
+          <tr><td>Africa</td><td>1</td><td>Serengeti</td></tr>
+        </tbody>
+        <tfoot>
+          <tr><td><strong>Total</strong></td><td><strong>8</strong></td><td>8 destinations across 4 continents</td></tr>
+        </tfoot>
+      </table>
+      <p style="margin-top:.8rem; font-size:.88rem; color:var(--gray);">
+        All images are sourced from <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a> — free high-resolution travel photography.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- ========== LIGHTBOX ========== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <span class="lightbox-close" onclick="closeLightbox()" aria-label="Close image viewer">&times;</span>
+    <img id="lightboxImg" src="" alt="" />
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>WanderWorld Travel</h4>
+        <p>123 Explorer Avenue<br />Thamel, Kathmandu 44600<br />Nepal</p>
+        <p style="margin-top:.5rem;">✉ <a href="mailto:info@wanderworld.com">info@wanderworld.com</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="tips.html">Travel Tips</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Photo Credits</h4>
+        <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash Photographers</a>
+        <a href="https://www.pexels.com" target="_blank" rel="noopener">Pexels</a>
+      </div>
+    </div>
+    <div class="footer-secondary-nav">
+      <a href="index.html">Home</a> |
+      <a href="destinations.html">Destinations</a> |
+      <a href="gallery.html">Gallery</a> |
+      <a href="tips.html">Tips</a> |
+      <a href="about.html">About</a> |
+      <a href="contact.html">Contact</a>
+      <p class="footer-copy">&copy; 2026 WanderWorld Travel. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // ---- Lightbox ----
+    function openLightbox(el, caption) {
+      const fullSrc = el.getAttribute('href');
+      const img = document.getElementById('lightboxImg');
+      img.src = fullSrc;
+      img.alt = el.querySelector('img').alt;
+      document.getElementById('lightboxCaption').textContent = caption;
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+      if (e.target === this) closeLightbox();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    // ---- Filter ----
+    function filterGallery(cat) {
+      document.querySelectorAll('.gallery-item').forEach(item => {
+        if (cat === 'all' || item.dataset.category === cat) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
