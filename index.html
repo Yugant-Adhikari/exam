@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WanderWorld Travel | Explore the World</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="main-nav" aria-label="Main Navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">Discover<span>World</span></a>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="tips.html">Travel Tips</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SLIDER ========== -->
+  <section class="hero-slider" aria-label="Featured Destinations Slideshow">
+
+    <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1320&q=80');">
+      <div class="slide-overlay">
+        <h1>Discover the Swiss Alps</h1>
+        <p>Majestic peaks, crystal lakes, and timeless charm await you in the heart of Europe.</p>
+        <a href="destinations.html" class="slider-btn">Explore Now</a>
+      </div>
+    </div>
+
+    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1490197415175-074fd86b1fcc?w=1320&q=80');">
+      <div class="slide-overlay">
+        <h1>Temples of Southeast Asia</h1>
+        <p>Ancient wonders, golden spires, and rich cultural heritage across Thailand and beyond.</p>
+        <a href="destinations.html" class="slider-btn">Learn More</a>
+      </div>
+    </div>
+
+    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1320&q=80');">
+      <div class="slide-overlay">
+        <h1>African Safari Adventures</h1>
+        <p>Witness the Big Five in their natural habitat on the golden plains of the Serengeti.</p>
+        <a href="destinations.html" class="slider-btn">Book a Safari</a>
+      </div>
+    </div>
+
+    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1320&q=80');">
+      <div class="slide-overlay">
+        <h1>Tropical Paradise</h1>
+        <p>Powder-white beaches, turquoise waters, and endless sunshine — your dream escape.</p>
+        <a href="gallery.html" class="slider-btn">See Gallery</a>
+      </div>
+    </div>
+
+    <button class="slider-arrow prev" onclick="changeSlide(-1)" aria-label="Previous slide">&#8249;</button>
+    <button class="slider-arrow next" onclick="changeSlide(1)" aria-label="Next slide">&#8250;</button>
+
+    <div class="slider-dots" id="sliderDots"></div>
+  </section>
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main class="page-wrapper">
+
+    <!-- Welcome Section -->
+    <section class="section">
+      <div class="section-head">
+        <h2>Welcome to WanderWorld Travel</h2>
+        <p>Your trusted partner for unforgettable journeys around the globe. Whether you seek adventure, culture, relaxation, or discovery — we craft the perfect travel experience just for you.</p>
+      </div>
+      <div class="cards-grid">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=500&q=75" alt="Paris city view with the Eiffel Tower at dusk" />
+          <div class="card-body">
+            <span class="tag">Europe</span>
+            <h3>Paris, France</h3>
+            <p>The City of Light dazzles with iconic architecture, world-class cuisine, and timeless romance.</p>
+            <a href="destinations.html" class="btn">Explore</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=500&q=75" alt="Tokyo skyline at night with city lights" />
+          <div class="card-body">
+            <span class="tag">Asia</span>
+            <h3>Tokyo, Japan</h3>
+            <p>A mesmerizing blend of ultra-modern innovation and deep-rooted ancient traditions.</p>
+            <a href="destinations.html" class="btn">Explore</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?w=500&q=75" alt="Machu Picchu ancient ruins in Peru" />
+          <div class="card-body">
+            <span class="tag">South America</span>
+            <h3>Machu Picchu, Peru</h3>
+            <p>The Lost City of the Incas perched high in the Andes — a wonder of the ancient world.</p>
+            <a href="destinations.html" class="btn">Explore</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <div class="highlight-box">
+      <h2>Why Choose WanderWorld?</h2>
+      <p>We have been crafting extraordinary travel experiences since 2005. Our team of expert travel designers hand-picks every hotel, tour, and experience to ensure your journey exceeds all expectations. With over 150 destinations worldwide and a 98% customer satisfaction rate, you're in the best hands.</p>
+    </div>
+
+    <!-- Packages Table -->
+    <section class="section">
+      <h2>Popular Tour Packages</h2>
+      <p>Choose from our carefully curated packages designed for every kind of traveler.</p>
+      <table>
+        <caption>2026 Featured Tour Packages</caption>
+        <thead>
+          <tr>
+            <th rowspan="2">Destination</th>
+            <th colspan="2">Package Options</th>
+            <th rowspan="2">Best Season</th>
+          </tr>
+          <tr>
+            <th>Standard (USD)</th>
+            <th>Premium (USD)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Paris &amp; French Riviera</td>
+            <td>$2,499</td>
+            <td>$4,999</td>
+            <td>Spring &amp; Fall</td>
+          </tr>
+          <tr>
+            <td>Japan Cherry Blossom Tour</td>
+            <td>$3,199</td>
+            <td>$5,999</td>
+            <td>March–April</td>
+          </tr>
+          <tr>
+            <td>African Safari (Kenya)</td>
+            <td>$4,500</td>
+            <td>$8,200</td>
+            <td>June–October</td>
+          </tr>
+          <tr>
+            <td>Machu Picchu &amp; Amazon</td>
+            <td>$2,800</td>
+            <td>$5,200</td>
+            <td>May–September</td>
+          </tr>
+          <tr>
+            <td>Bali Island Escape</td>
+            <td>$1,999</td>
+            <td>$3,799</td>
+            <td>April–October</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4" style="font-size:.82rem; color: var(--gray); padding:.6rem 1rem;">
+              All prices are per person, double occupancy. Flights not included. Contact us for custom quotes.
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <!-- Quick Links / External Links -->
+    <section class="section">
+      <h2>Useful Travel Resources</h2>
+      <p>Planning your next adventure? These trusted external resources can help:</p>
+      <ul style="list-style:none; display:flex; flex-wrap:wrap; gap:1rem; margin-top:.8rem;">
+        <li><a href="https://www.lonelyplanet.com" target="_blank" rel="noopener">🌍 Lonely Planet</a></li>
+        <li><a href="https://www.tripadvisor.com" target="_blank" rel="noopener">⭐ TripAdvisor</a></li>
+        <li><a href="https://www.nationalgeographic.com/travel" target="_blank" rel="noopener">📷 Nat Geo Travel</a></li>
+        <li><a href="https://www.skyscanner.com" target="_blank" rel="noopener">✈️ Skyscanner</a></li>
+        <li><a href="https://www.booking.com" target="_blank" rel="noopener">🏨 Booking.com</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>WanderWorld Travel</h4>
+        <p>123 Explorer Avenue<br />Thamel, Kathmandu 44600<br />Nepal</p>
+        <p style="margin-top:.5rem;">📞 +977-1-4123456<br />
+          ✉ <a href="mailto:info@wanderworld.com">info@wanderworld.com</a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="tips.html">Travel Tips</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Our Services</h4>
+        <a href="destinations.html">Guided Tours</a>
+        <a href="destinations.html">Adventure Travel</a>
+        <a href="destinations.html">Luxury Packages</a>
+        <a href="contact.html">Custom Itineraries</a>
+      </div>
+      <div class="footer-col">
+        <h4>External Links</h4>
+        <a href="https://www.unwto.org" target="_blank" rel="noopener">UN World Tourism</a>
+        <a href="https://www.iata.org" target="_blank" rel="noopener">IATA Travel</a>
+        <a href="https://www.lonelyplanet.com" target="_blank" rel="noopener">Lonely Planet</a>
+        <a href="https://www.nationalgeographic.com/travel" target="_blank" rel="noopener">Nat Geo Travel</a>
+      </div>
+    </div>
+    <div class="footer-secondary-nav">
+      <a href="index.html">Home</a> |
+      <a href="destinations.html">Destinations</a> |
+      <a href="gallery.html">Gallery</a> |
+      <a href="tips.html">Tips</a> |
+      <a href="about.html">About</a> |
+      <a href="contact.html">Contact</a>
+      <p class="footer-copy">&copy; 2026 WanderWorld Travel. All rights reserved. | Designed for IT Assessment 2026</p>
+    </div>
+  </footer>
+
+  <!-- ========== SLIDER JS ========== -->
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const dotsContainer = document.getElementById('sliderDots');
+    let current = 0, timer;
+
+    // Build dots
+    slides.forEach((_, i) => {
+      const dot = document.createElement('div');
+      dot.className = 'dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+      dot.onclick = () => goTo(i);
+      dotsContainer.appendChild(dot);
+    });
+
+    function goTo(n) {
+      slides[current].classList.remove('active');
+      dotsContainer.children[current].classList.remove('active');
+      current = (n + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      dotsContainer.children[current].classList.add('active');
+      resetTimer();
+    }
+
+    function changeSlide(dir) { goTo(current + dir); }
+
+    function resetTimer() {
+      clearInterval(timer);
+      timer = setInterval(() => goTo(current + 1), 5000);
+    }
+
+    resetTimer();
+  </script>
+
+</body>
+</html>
